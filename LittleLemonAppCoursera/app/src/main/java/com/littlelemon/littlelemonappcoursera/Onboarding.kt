@@ -128,9 +128,3 @@ fun InputTextField(fieldName:String, fieldValue:String, onClickFn: (String)->Uni
         )
     }
 }
-
-//@Preview
-//@Composable
-//fun OnboardingScreenPreview(){
-//    OnboardingScreen()
-//}

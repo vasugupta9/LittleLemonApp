@@ -71,8 +71,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    var menuItems = database.menuItemDao().getAll().observeAsState(listOf<MenuItemDb>()).value
-                    LittleLemon(menuItems)
+                    LittleLemon()
                 }
             }
         }
@@ -80,8 +79,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun LittleLemon(menuItems: List<MenuItemDb>){
+fun LittleLemon(){
     val navController = rememberNavController()
     Navigation(navController)
-
 }
