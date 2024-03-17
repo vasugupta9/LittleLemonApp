@@ -74,41 +74,37 @@ fun CategoriesPanel(onClickFn: (String)->Unit) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(20.dp)
+            .padding(5.dp)
     ) {
-        Text("ORDER FOR DELIVERY", style=MaterialTheme.typography.headlineSmall)
+        Text("ORDER FOR DELIVERY", fontWeight = FontWeight.Bold)
         Row {
             Button(
-                shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = LittleLemonColors.cloud, contentColor = Color.Black),
                 modifier = Modifier.padding(1.dp),
                 onClick = { onClickFn("starters") }
             ) {
-                Text("Starters")
+                Text(text="Starters", fontSize = 10.sp)
             }
             Button(
-                shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = LittleLemonColors.cloud, contentColor = Color.Black),
                 modifier = Modifier.padding(1.dp),
                 onClick = { onClickFn("mains") }
             ) {
-                Text("Mains")
+                Text("Mains", fontSize = 10.sp)
             }
             Button(
-                shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = LittleLemonColors.cloud, contentColor = Color.Black),
                 modifier = Modifier.padding(1.dp),
                 onClick = { onClickFn("desserts") }
             ) {
-                Text("Deserts")
+                Text("Deserts", fontSize = 10.sp)
             }
             Button(
-                shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = LittleLemonColors.cloud, contentColor = Color.Black),
                 modifier = Modifier.padding(1.dp),
                 onClick = { onClickFn("drinks") }
             ) {
-                Text("Drinks")
+                Text("Drinks", fontSize = 10.sp)
             }
         }
 
@@ -158,7 +154,7 @@ fun TopPanel(navController: NavHostController){
         horizontalArrangement = Arrangement.SpaceBetween,
         modifier = Modifier
             .fillMaxWidth()
-            .height(80.dp)
+            .height(70.dp)
     ) {
         Image(
             painter = painterResource(id = R.drawable.logo),
@@ -180,13 +176,13 @@ fun HeroPanel(searchPhrase:String, onValChangedFunc: (String)->Unit){
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
-            .padding(top = 16.dp, bottom = 16.dp)
+            .padding(top = 10.dp, bottom = 10.dp)
             .background(LittleLemonColors.darkGreen)
             .fillMaxWidth()
     ) {
         Text(
             text = stringResource(id = R.string.title),
-            fontSize = 40.sp,
+            fontSize = 30.sp,
             fontWeight = FontWeight.Bold,
             color = LittleLemonColors.yellow,
             modifier = Modifier
@@ -195,7 +191,7 @@ fun HeroPanel(searchPhrase:String, onValChangedFunc: (String)->Unit){
         )
         Text(
             text = stringResource(id = R.string.location),
-            fontSize = 24.sp,
+            fontSize = 20.sp,
             color = LittleLemonColors.cloud,
             modifier = Modifier
                 .fillMaxWidth()
@@ -205,7 +201,7 @@ fun HeroPanel(searchPhrase:String, onValChangedFunc: (String)->Unit){
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
             modifier = Modifier
-                .padding(20.dp)
+                .padding(start=20.dp,end=20.dp,top=10.dp, bottom=10.dp)
                 .fillMaxWidth()
         ) {
 
@@ -213,7 +209,7 @@ fun HeroPanel(searchPhrase:String, onValChangedFunc: (String)->Unit){
                 text = stringResource(id = R.string.description),
                 style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier
-                    .padding(bottom = 28.dp)
+                    .padding(bottom = 10.dp)
                     .weight(2f),
                 color = LittleLemonColors.cloud
             )
@@ -235,7 +231,7 @@ fun HeroPanel(searchPhrase:String, onValChangedFunc: (String)->Unit){
             placeholder = {Text("Enter Search Phrase")},
             leadingIcon = { Icon(imageVector = Icons.Default.Search, contentDescription = "Search icon") },
             modifier = Modifier
-                .padding(20.dp)
+                .padding(10.dp)
                 .fillMaxWidth()
         )
 

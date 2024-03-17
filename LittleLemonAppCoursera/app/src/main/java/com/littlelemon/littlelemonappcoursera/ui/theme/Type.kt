@@ -12,20 +12,20 @@ val Typography = Typography(
     bodyLarge = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
+        fontSize = 14.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     ),
 
    headlineLarge = TextStyle(
-                    fontSize = 26.sp,
+                    fontSize = 24.sp,
                     fontWeight = FontWeight.Bold,
                     color = LittleLemonColors.charcoal
     ),
 
     headlineMedium = TextStyle(
         color = LittleLemonColors.charcoal,
-        fontSize = 18.sp,
+        fontSize = 16.sp,
         fontWeight = FontWeight.Bold
     ),
 
@@ -39,7 +39,7 @@ val Typography = Typography(
     ),
 
     labelSmall = TextStyle(
-        fontSize = 14.sp,
+        fontSize = 12.sp,
         fontWeight = FontWeight.Bold
     )
 
